@@ -19,6 +19,8 @@ class Post(BaseModel):
     name = CharField(max_length=255, null=False)
     family = CharField(max_length=255, null=False)
     date = DateField(default=datetime.now)
+    Email = CharField(max_length=55, null=False)
+    password = CharField(max_length=55, null=False)
 
     def __repr__(self):
         return self.name

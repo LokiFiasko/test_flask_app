@@ -14,10 +14,14 @@ def create():
     if request.method == 'POST':
         name = request.form['name']
         family = request.form['family']
+        Email = request.form['Email']
+        password = request.form['password']
 
         Post.create(
             name = name,
-            family = family
+            family = family,
+            Email = Email,
+            password = password
         )
         return redirect('/')
     return render_template('create.html')
